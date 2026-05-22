@@ -14,7 +14,7 @@
         }
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
         }
         .navbar {
@@ -23,17 +23,24 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
         }
         .nav-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             color: #4a5568;
             font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
         }
         .nav-links a:hover {
             color: #667eea;
@@ -64,21 +71,47 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            transition: transform 0.3s;
         }
         .btn-gradient:hover {
             transform: translateY(-2px);
             color: white;
         }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-color: transparent;
+        }
         .skill-badge {
             background: linear-gradient(135deg, #667eea20, #764ba220);
             color: #667eea;
-            padding: 6px 14px;
-            border-radius: 20px;
+            padding: 8px 16px;
+            border-radius: 25px;
             font-size: 0.85rem;
+            font-weight: 500;
+            margin: 5px;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            margin: 4px;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        .skill-badge:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
         }
         .section-title {
             font-size: 1.8rem;
@@ -87,16 +120,40 @@
             background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+            margin-top: 8px;
         }
         .experience-item {
             border-left: 3px solid #667eea;
             padding-left: 1.5rem;
             margin-bottom: 2rem;
         }
+        .experience-item h5 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
         footer {
             text-align: center;
             padding: 2rem;
             color: white;
+        }
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
         }
         @media (max-width: 768px) {
             .container-custom {
@@ -105,9 +162,8 @@
             .card-portfolio {
                 padding: 1.5rem;
             }
-            .nav-links {
-                gap: 1rem;
-                flex-wrap: wrap;
+            .section-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -115,11 +171,11 @@
 <body>
     <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">🏠 Home</a></li>
+            <li><a href="#about">👤 About</a></li>
+            <li><a href="#experience">💼 Experience</a></li>
+            <li><a href="#skills">⚙️ Skills</a></li>
+            <li><a href="#contact">📧 Contact</a></li>
         </ul>
     </nav>
 
@@ -127,19 +183,21 @@
         <!-- Home Section -->
         <section id="home">
             <div class="card-portfolio text-center">
-                <i class="fas fa-code fa-4x" style="color: #667eea;"></i>
-                <h1 class="mt-3">Denissya Julianthy</h1>
-                <h5 class="text-muted">Web Developer & System Analyst</h5>
-                <p class="mt-3">Informatics Graduate | Laravel Developer | System Analyst</p>
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <a href="https://github.com/denissyaj/denissya-portfolio" target="_blank" class="btn-gradient">
+                <div class="hero-icon">
+                    <i class="fas fa-laptop-code fa-4x" style="color: #667eea;"></i>
+                </div>
+                <h1 style="font-size: 2.5rem; font-weight: 700;">Denissya Julianthy</h1>
+                <h5 class="text-muted mb-3">Web Developer & System Analyst</h5>
+                <p class="lead">Informatics Graduate | Laravel Developer | System Analyst</p>
+                <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+                    <a href="https://github.com/denissya" target="_blank" class="btn-gradient">
                         <i class="fab fa-github"></i> GitHub
                     </a>
                     <a href="https://linkedin.com/in/denissyajulianthy" target="_blank" class="btn-gradient">
                         <i class="fab fa-linkedin"></i> LinkedIn
                     </a>
-                    <a href="#contact" class="btn-gradient">
-                        <i class="fas fa-envelope"></i> Contact
+                    <a href="mailto:denissyaaj23@gmail.com" class="btn-outline">
+                        <i class="fas fa-envelope"></i> Email Me
                     </a>
                 </div>
             </div>
@@ -149,15 +207,26 @@
         <section id="about">
             <div class="card-portfolio">
                 <h2 class="section-title">About Me</h2>
-                <p>An informatics graduate from Jenderal Achmad Yani University, interested in systems analysis and web development. Experienced web developer specializing in internal web applications using PHP (Laravel).</p>
+                <p class="lead">An informatics graduate from Jenderal Achmad Yani University, interested in systems analysis and web development.</p>
+                <p>Experienced web developer specializing in internal web applications using PHP (Laravel). Strong background in problem-solving, system documentation design, and systems development. Passionate about analyzing and building efficient, scalable, and user-friendly systems.</p>
+                
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <h5><i class="fas fa-graduation-cap text-primary"></i> Education</h5>
-                        <p><strong>Bachelor of Informatics</strong><br>Jenderal Achmad Yani University<br>GPA: 3.14/4.00 (2021-2025)</p>
+                        <div class="p-3 bg-light rounded">
+                            <h5><i class="fas fa-graduation-cap text-primary"></i> Education</h5>
+                            <p class="mb-0"><strong>Bachelor of Informatics</strong></p>
+                            <p class="mb-0">Jenderal Achmad Yani University</p>
+                            <p class="mb-0">GPA: 3.14/4.00 (2021-2025)</p>
+                            <small class="text-muted">Thesis: Clustering of Weather Change Patterns Using K-Medoids and Gap Statistics</small>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <h5><i class="fas fa-certificate text-primary"></i> Certification</h5>
-                        <p><strong>TOEFL Certification</strong><br>Score: 507 (Listening:39, Structure:48, Reading:65)<br>Valid until August 2026</p>
+                        <div class="p-3 bg-light rounded">
+                            <h5><i class="fas fa-certificate text-primary"></i> Certification</h5>
+                            <p class="mb-0"><strong>TOEFL Certification</strong></p>
+                            <p class="mb-0">Score: 507 (Listening:39, Structure:48, Reading:65)</p>
+                            <small class="text-muted">Jenderal Achmad Yani University | Valid until August 2026</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,24 +239,24 @@
                 
                 <div class="experience-item">
                     <h5>Web Developer @ PT Simex Pharmaceutical Indonesia</h5>
-                    <small class="text-muted">February 2026 - Present</small>
-                    <ul class="mt-2">
-                        <li>Building systems using Laravel Framework (Technical Support, PPIC Material Inventory)</li>
+                    <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
+                    <ul class="mt-2 mb-0">
+                        <li>Building systems using Laravel Framework, including: Technical Support, PPIC (Material Inventory)</li>
                     </ul>
                 </div>
                 
                 <div class="experience-item">
                     <h5>System Analyst @ PT Simex Pharmaceutical Indonesia</h5>
-                    <small class="text-muted">December 2025 - February 2026</small>
-                    <ul class="mt-2">
-                        <li>Created System Design Documents (DPSI) for IT Support, Technical Support, Environment Monitoring</li>
+                    <small class="text-muted"><i class="far fa-calendar-alt"></i> December 2025 - February 2026</small>
+                    <ul class="mt-2 mb-0">
+                        <li>Created System Design Documents (DPSI) for: IT Support, Technical Support, Environment Monitoring, on PIMS Website</li>
                     </ul>
                 </div>
                 
                 <div class="experience-item">
                     <h5>Web Developer @ Dinas Komunikasi dan Informatika Kota Solok</h5>
-                    <small class="text-muted">August 2024 - September 2024</small>
-                    <ul class="mt-2">
+                    <small class="text-muted"><i class="far fa-calendar-alt"></i> August 2024 - September 2024</small>
+                    <ul class="mt-2 mb-0">
                         <li>Developed Dinas Kesehatan Kota Solok website using PHP Native</li>
                     </ul>
                 </div>
@@ -198,15 +267,18 @@
         <section id="skills">
             <div class="card-portfolio">
                 <h2 class="section-title">Technical Skills</h2>
+                
                 <div class="mb-4">
                     <h5>System Analysis</h5>
                     <div>
-                        <span class="skill-badge"><i class="fas fa-file-alt"></i> URS</span>
+                        <span class="skill-badge"><i class="fas fa-chart-line"></i> System Analysis</span>
+                        <span class="skill-badge"><i class="fas fa-file-alt"></i> User Requirements Specification</span>
                         <span class="skill-badge"><i class="fas fa-file-contract"></i> FSD</span>
                         <span class="skill-badge"><i class="fas fa-book"></i> DPSI</span>
                         <span class="skill-badge"><i class="fas fa-water"></i> SDLC Waterfall</span>
                     </div>
                 </div>
+                
                 <div class="mb-4">
                     <h5>Web Development</h5>
                     <div>
@@ -216,15 +288,35 @@
                         <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
                         <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
                         <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fas fa-vial"></i> Software Testing (UAT)</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> Database & Query</span>
                     </div>
                 </div>
-                <div>
+                
+                <div class="mb-4">
                     <h5>Soft Skills</h5>
                     <div>
                         <span class="skill-badge">Responsibility</span>
                         <span class="skill-badge">Teamwork</span>
                         <span class="skill-badge">Problem-Solving</span>
                         <span class="skill-badge">Analytical Thinking</span>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Computer Skills</h5>
+                    <div>
+                        <span class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Office</span>
+                        <span class="skill-badge"><i class="fab fa-google"></i> Google Workspace</span>
+                        <span class="skill-badge"><i class="fas fa-chart-line"></i> Draw.IO Diagrams</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5>Languages</h5>
+                    <div>
+                        <span class="skill-badge"><i class="fas fa-flag"></i> Indonesian (Native)</span>
+                        <span class="skill-badge"><i class="fas fa-language"></i> English (Intermediate)</span>
                     </div>
                 </div>
             </div>
@@ -236,19 +328,43 @@
                 <h2 class="section-title">Contact Me</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <p><i class="fas fa-envelope text-primary"></i> <strong>Email:</strong><br>denissyaaj23@gmail.com</p>
-                        <p><i class="fas fa-phone text-primary"></i> <strong>Phone:</strong><br>089530026270</p>
-                        <p><i class="fas fa-map-marker-alt text-primary"></i> <strong>Location:</strong><br>Kota Cimahi, Jawa Barat</p>
+                        <div class="mb-3">
+                            <i class="fas fa-envelope fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:denissyaaj23@gmail.com">denissyaaj23@gmail.com</a>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-phone fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>Phone:</strong><br>
+                            089530026270
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-map-marker-alt fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>Location:</strong><br>
+                            Kota Cimahi, Jawa Barat 40523
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <p><i class="fab fa-linkedin text-primary"></i> <strong>LinkedIn:</strong><br><a href="https://linkedin.com/in/denissyajulianthy">linkedin.com/in/denissyajulianthy</a></p>
-                        <p><i class="fab fa-instagram text-primary"></i> <strong>Instagram:</strong><br><a href="https://instagram.com/denissya.julianthy">@denissya.julianthy</a></p>
-                        <p><i class="fab fa-github text-primary"></i> <strong>GitHub:</strong><br><a href="https://github.com/denissya">github.com/denissya</a></p>
+                        <div class="mb-3">
+                            <i class="fab fa-linkedin fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>LinkedIn:</strong><br>
+                            <a href="https://linkedin.com/in/denissyajulianthy" target="_blank">linkedin.com/in/denissyajulianthy</a>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fab fa-instagram fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>Instagram:</strong><br>
+                            <a href="https://instagram.com/denissya.julianthy" target="_blank">@denissya.julianthy</a>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fab fa-github fa-fw" style="width: 30px; color: #667eea;"></i>
+                            <strong>GitHub:</strong><br>
+                            <a href="https://github.com/denissya" target="_blank">github.com/denissya</a>
+                        </div>
                     </div>
                 </div>
                 <hr>
                 <div class="text-center">
-                    <a href="https://github.com/denissya/denissya-portfolio/blob/main/public/files/CV_Denissya_Julianthy.pdf" target="_blank" class="btn btn-success">
+                    <a href="https://github.com/denissya/denissya-portfolio/blob/main/public/files/CV_Denissya_Julianthy.pdf" target="_blank" class="btn-gradient">
                         <i class="fas fa-download"></i> Download CV (PDF)
                     </a>
                 </div>
@@ -257,7 +373,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Denissya Julianthy. Built with <i class="fas fa-heart"></i> using HTML/CSS</p>
+        <p>&copy; 2025 Denissya Julianthy. Built with <i class="fas fa-heart" style="color: #ff6b6b;"></i> using Laravel & Bootstrap</p>
+        <small>Web Developer & System Analyst</small>
     </footer>
 </body>
 </html>
