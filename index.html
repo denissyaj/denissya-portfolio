@@ -264,6 +264,12 @@
             transform: translateY(-5px);
         }
         
+        .feature-box {
+            background: #f8f9fa;
+            border-radius: 15px;
+            height: 100%;
+        }
+        
         @media (max-width: 768px) {
             .container-custom { padding: 1rem; }
             .card-custom { padding: 1.5rem; }
@@ -286,7 +292,7 @@
                 <li class="nav-item"><a class="nav-link" href="#experience">💼 Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">⚙️ Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">📁 Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#screenshots">📸 Screenshots</a></li>
+                <li class="nav-item"><a class="nav-link" href="#screenshots">📸 Technical Support</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">📧 Contact</a></li>
             </ul>
         </div>
@@ -418,10 +424,18 @@
                     <div class="timeline-item mb-4">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <h5 class="mb-1">PT Simex Pharmaceutical Indonesia | Sukabumi, Indonesia</h5>
-                                <h6 class="text-primary">Web Developer</h6>
-                                <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
-                                <span class="badge bg-success ms-2">Current</span>
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="mb-1">PT Simex Pharmaceutical Indonesia | Sukabumi, Indonesia</h5>
+                                        <h6 class="text-primary">Web Developer</h6>
+                                        <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
+                                    </div>
+                                    <span class="badge bg-success">Current</span>
+                                </div>
+                                <ul class="mt-2 mb-0">
+                                    <li><strong>Technical Support System:</strong> Developed a complete technical support management system with Create Request, 2-Level Approval (Requester Manager & TK Manager), Close Ticket, History, and Quality Report features using Laravel.</li>
+                                    <li><strong>PPIC Material Inventory System:</strong> Built a material inventory management system with real-time stock tracking, purchase order management, automated notifications, and reporting dashboard using Laravel.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -437,7 +451,11 @@
                                         <i class="fas fa-clipboard-list"></i> System Design Documents Created
                                     </button>
                                     <div class="collapse mt-2" id="analystDetailsSys">
-                                        <ul><li><strong>IT Support System</strong> - Complete DPSI</li><li><strong>Technical Support System</strong> - DPSI covering 2-level approval, spare part tracking, quality reporting</li><li><strong>Environment Monitoring System</strong> - System design</li></ul>
+                                        <ul>
+                                            <li><strong>IT Support System</strong> - Complete DPSI: URS, functional/non-functional requirements, UML diagrams, database design, UI/UX in Figma</li>
+                                            <li><strong>Technical Support System</strong> - DPSI covering request management, 2-level approval, spare part tracking, history, quality reporting</li>
+                                            <li><strong>Environment Monitoring System</strong> - System design for environmental parameters monitoring</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +473,7 @@
                                         <i class="fas fa-code"></i> Projects
                                     </button>
                                     <div class="collapse mt-2" id="internDetailsNew">
-                                        <ul><li>Developed Dinas Kesehatan Kota Solok website using PHP Native</li><li>Integrated MySQL database</li></ul>
+                                        <ul><li>Developed Dinas Kesehatan Kota Solok website using PHP Native</li><li>Built responsive interfaces with Bootstrap</li><li>Integrated MySQL database for dynamic content management</li></ul>
                                     </div>
                                 </div>
                             </div>
@@ -483,16 +501,16 @@
             <div class="card-custom">
                 <h1 class="section-title">Featured Projects</h1>
                 <div class="accordion mt-4" id="projectsAccordion">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj1"><i class="fas fa-headset me-3 text-primary"></i> Technical Support System</button></h2><div id="proj1" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: System Analyst & Web Developer</strong></div><p>Complete technical support management system with 6 main features.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj2"><i class="fas fa-desktop me-3 text-primary"></i> IT Support System</button></h2><div id="proj2" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-warning"><strong>My Role: System Analyst Only</strong></div><p>Complete DPSI documentation for IT support ticketing system.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj3"><i class="fas fa-boxes me-3 text-primary"></i> PPIC Material Inventory System</button></h2><div id="proj3" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Material inventory system with real-time stock tracking.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj4"><i class="fas fa-hospital me-3 text-primary"></i> Dinas Kesehatan Website</button></h2><div id="proj4" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Official website built with PHP Native.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj5"><i class="fas fa-cloud-sun-rain me-3 text-primary"></i> Weather Pattern Research</button></h2><div id="proj5" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-success"><strong>SINTA 3 Publication</strong> - BITS Journal Vol 7 No 2 Sept 2025</div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj1"><i class="fas fa-headset me-3 text-primary"></i> Technical Support System</button></h2><div id="proj1" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: System Analyst & Web Developer</strong></div><p>Complete technical support management system with Create Request, 2-Level Approval (Requester Manager & TK Manager), Close Ticket, History, and Quality Report features.</p><div class="mt-2"><span class="skill-badge">Laravel</span><span class="skill-badge">MySQL</span><span class="skill-badge">Bootstrap 5</span><span class="skill-badge">JavaScript</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj2"><i class="fas fa-desktop me-3 text-primary"></i> IT Support System</button></h2><div id="proj2" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-warning"><strong>My Role: System Analyst Only</strong></div><p>Complete DPSI documentation for IT support ticketing system including URS, UML diagrams, database design, and UI/UX design.</p></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj3"><i class="fas fa-boxes me-3 text-primary"></i> PPIC Material Inventory System</button></h2><div id="proj3" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Material inventory management system with real-time stock tracking, purchase order management with approval workflow, automated reorder notifications, and analytics dashboard.</p><div class="mt-2"><span class="skill-badge">Laravel</span><span class="skill-badge">MySQL</span><span class="skill-badge">Bootstrap 5</span><span class="skill-badge">JavaScript</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj4"><i class="fas fa-hospital me-3 text-primary"></i> Dinas Kesehatan Website</button></h2><div id="proj4" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Official website for Dinas Kesehatan Kota Solok built with PHP Native, featuring information portal, health service management, contact system, and responsive design.</p><div class="mt-2"><span class="skill-badge">PHP Native</span><span class="skill-badge">MySQL</span><span class="skill-badge">Bootstrap</span><span class="skill-badge">jQuery</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj5"><i class="fas fa-cloud-sun-rain me-3 text-primary"></i> Weather Pattern Research</button></h2><div id="proj5" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-success"><strong>SINTA 3 Publication</strong><br>"Pengelompokkan Pola Perubahan Cuaca Menggunakan Metode K-Medoids dan Gap Statistic"<br>BITS Journal Vol 7 No 2 Sept 2025</div></div></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- ==================== TECHNICAL SUPPORT SYSTEM - SCREENSHOTS WITH FEATURES ==================== -->
+        <!-- ==================== TECHNICAL SUPPORT SYSTEM - SCREENSHOTS ==================== -->
         <section id="screenshots">
             <div class="card-custom">
                 <h1 class="section-title">📸 Technical Support System - Screenshots</h1>
@@ -508,13 +526,13 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">1. Create Request</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Structured technical support request form</li>
                                 <li>Select job type (Repair/Maintenance)</li>
                                 <li>Select problematic asset/machine</li>
                                 <li>Problem description and photo upload</li>
                                 <li>Assign responsible section (Maintenance/Utility/Workshop/Civil)</li>
-                                <li>Auto-generate request number (BT0008/TK/V/2026)</li>
+                                <li>Auto-generate request number</li>
                             </ul>
                         </div>
                     </div>
@@ -530,7 +548,7 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">2. Approval Requester Manager (Level 1)</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Requester's supervisor receives notification</li>
                                 <li>Check request completeness and accuracy</li>
                                 <li>Approve or Reject with required comments</li>
@@ -550,7 +568,7 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">3. Approval TK Manager (Level 2)</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Technical manager evaluates the request</li>
                                 <li>Check resource, technician, and equipment availability</li>
                                 <li>Final approval or rejection with required comments</li>
@@ -570,7 +588,7 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">4. Close Ticket</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Technician inputs work results and completion steps</li>
                                 <li>Record spare part usage and part code</li>
                                 <li>Fill completion date and time</li>
@@ -592,7 +610,7 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">5. History</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Store complete technical support request history</li>
                                 <li>Searchable by request number, asset, or period</li>
                                 <li>Display complete details (submission, approval, execution, closure)</li>
@@ -613,7 +631,7 @@
                     <div class="col-md-6">
                         <div class="feature-box p-3">
                             <h3 class="text-primary">6. Quality Report</h3>
-                            <ul class="mt-3">
+                            <ul class="mt-3 mb-0">
                                 <li>Request count report by status and period</li>
                                 <li>Work completion duration report (Completion Time)</li>
                                 <li>Spare part usage report (Part Code)</li>
