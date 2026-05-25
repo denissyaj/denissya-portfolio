@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,6 @@
             min-height: 100vh;
         }
         
-        /* Navbar Styles */
         .navbar {
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px);
@@ -63,7 +62,6 @@
             width: 80%;
         }
         
-        /* Main Content */
         .main-content {
             min-height: calc(100vh - 200px);
             padding: 3rem 0;
@@ -74,7 +72,6 @@
             padding: 2rem;
         }
         
-        /* Card Styles */
         .card-custom {
             background: white;
             border-radius: 20px;
@@ -89,7 +86,6 @@
             box-shadow: 0 30px 50px rgba(0,0,0,0.15);
         }
         
-        /* Section Title */
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -112,7 +108,6 @@
             border-radius: 2px;
         }
         
-        /* Button Styles */
         .btn-gradient {
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -149,7 +144,6 @@
             border-color: transparent;
         }
         
-        /* Accordion Styles */
         .accordion-item {
             border: 1px solid #e9ecef !important;
             border-radius: 12px !important;
@@ -180,7 +174,6 @@
             background: #f8f9fa;
         }
         
-        /* Skill Badge */
         .skill-badge {
             background: linear-gradient(135deg, #667eea20, #764ba220);
             color: #667eea;
@@ -202,7 +195,6 @@
             transform: translateY(-2px);
         }
         
-        /* Timeline */
         .timeline-item {
             position: relative;
             padding-left: 2rem;
@@ -233,7 +225,6 @@
             background: linear-gradient(135deg, #667eea, #764ba2);
         }
         
-        /* Contact Info */
         .contact-info {
             background: linear-gradient(135deg, #667eea, #764ba2);
             padding: 2rem;
@@ -247,7 +238,6 @@
             width: 40px;
         }
         
-        /* Footer */
         .footer {
             background: rgba(255, 255, 255, 0.95);
             padding: 1.5rem 0;
@@ -256,24 +246,24 @@
             color: #4a5568;
         }
         
-        /* Feature List */
-        .feature-list {
-            list-style: none;
-            padding-left: 0;
+        .screenshot-img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
         }
-        .feature-list li {
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+        .screenshot-img:hover {
+            transform: scale(1.02);
         }
-        .feature-list li i {
-            color: #667eea;
-            margin-top: 3px;
-            min-width: 20px;
+        .screenshot-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-5px);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .container-custom { padding: 1rem; }
             .card-custom { padding: 1.5rem; }
@@ -283,7 +273,6 @@
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand" href="#home">Denissya Portfolio</a>
@@ -297,6 +286,7 @@
                 <li class="nav-item"><a class="nav-link" href="#experience">💼 Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">⚙️ Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">📁 Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#screenshots">📸 Screenshots</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">📧 Contact</a></li>
             </ul>
         </div>
@@ -319,9 +309,9 @@
                 </div>
                 <div class="mt-5 pt-3">
                     <div class="row text-center">
-                        <div class="col-4"><h3 class="fw-bold text-primary">2+</h3><small class="text-muted">Years Experience</small></div>
-                        <div class="col-4"><h3 class="fw-bold text-primary">5+</h3><small class="text-muted">Projects Completed</small></div>
-                        <div class="col-4"><h3 class="fw-bold text-primary">5+</h3><small class="text-muted">System Documents</small></div>
+                        <div class="col-4"><h3 class="fw-bold text-primary">2+</h3><small>Years Experience</small></div>
+                        <div class="col-4"><h3 class="fw-bold text-primary">5+</h3><small>Projects Completed</small></div>
+                        <div class="col-4"><h3 class="fw-bold text-primary">5+</h3><small>System Documents</small></div>
                     </div>
                 </div>
                 <div class="mt-5 pt-3">
@@ -343,7 +333,7 @@
                     <div class="text-center p-3">
                         <i class="fas fa-chart-line fa-3x" style="color: #667eea;"></i>
                         <h5 class="mt-2">System Analysis</h5>
-                        <p class="text-muted small">User Requirements Specification, FSD, System Design Documents (DPSI)</p>
+                        <p class="text-muted small">URS, FSD, System Design Documents (DPSI)</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -384,11 +374,7 @@
                         
                         <div class="accordion mt-4" id="aboutAccordion">
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                        <i class="fas fa-graduation-cap"></i> Education Details
-                                    </button>
-                                </h2>
+                                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"><i class="fas fa-graduation-cap"></i> Education Details</button></h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
                                     <div class="accordion-body">
                                         <h5>Jenderal Achmad Yani University | Cimahi, Indonesia</h5>
@@ -398,40 +384,21 @@
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                        <i class="fas fa-certificate"></i> Certification
-                                    </button>
-                                </h2>
+                                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"><i class="fas fa-certificate"></i> Certification</button></h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
-                                    <div class="accordion-body">
-                                        <div class="alert alert-info"><strong>TOEFL Certification</strong><br>Score: 507 (Listening:39, Structure:48, Reading:65)<br>Jenderal Achmad Yani University | Valid until August 2026</div>
-                                    </div>
+                                    <div class="accordion-body"><div class="alert alert-info"><strong>TOEFL Certification</strong><br>Score: 507 (Listening:39, Structure:48, Reading:65)<br>Valid until August 2026</div></div>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                        <i class="fas fa-language"></i> Languages
-                                    </button>
-                                </h2>
+                                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"><i class="fas fa-language"></i> Languages</button></h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
-                                    <div class="accordion-body">
-                                        <div class="d-flex gap-4 flex-wrap"><div class="text-center p-3 bg-light rounded flex-grow-1"><h5>Indonesian</h5><span class="badge bg-success">Native</span></div>
-                                        <div class="text-center p-3 bg-light rounded flex-grow-1"><h5>English</h5><span class="badge bg-info">Intermediate</span><div class="progress mt-2" style="height:5px"><div class="progress-bar" style="width:70%"></div></div><small class="text-muted">TOEFL Score: 507</small></div></div>
-                                    </div>
+                                    <div class="accordion-body"><div class="d-flex gap-4 flex-wrap"><div class="text-center p-3 bg-light rounded"><h5>Indonesian</h5><span class="badge bg-success">Native</span></div><div class="text-center p-3 bg-light rounded"><h5>English</h5><span class="badge bg-info">Intermediate</span><div class="progress mt-2" style="height:5px"><div class="progress-bar" style="width:70%"></div></div><small>TOEFL: 507</small></div></div></div>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                        <i class="fas fa-file-alt"></i> Publication
-                                    </button>
-                                </h2>
+                                <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"><i class="fas fa-file-alt"></i> Publication</button></h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
-                                    <div class="accordion-body">
-                                        <div class="alert alert-success"><strong>Journal Publication (SINTA 3)</strong><br>"Pengelompokkan Pola Perubahan Cuaca Menggunakan Metode K-Medoids dan Gap Statistic"<br>BUILDING OF INFORMATICS, TECHNOLOGY AND SCIENCE (BITS)<br>Volume 7, No. 2, September 2025 | ISSN 2684-8910<br><span class="badge bg-primary mt-2">Re-Akreditasi SINTA 3</span></div>
-                                    </div>
+                                    <div class="accordion-body"><div class="alert alert-success"><strong>Journal Publication (SINTA 3)</strong><br>"Pengelompokkan Pola Perubahan Cuaca Menggunakan Metode K-Medoids dan Gap Statistic"<br>BITS Journal Vol 7 No 2 Sept 2025</div></div>
                                 </div>
                             </div>
                         </div>
@@ -442,18 +409,10 @@
                             <div class="mt-3"><i class="fas fa-map-marker-alt text-primary me-2"></i> Kota Cimahi, Jawa Barat 40523</div>
                             <div class="mt-2"><i class="fas fa-envelope text-primary me-2"></i> denissyaaj23@gmail.com</div>
                             <div class="mt-2"><i class="fas fa-phone text-primary me-2"></i> 089530026270</div>
-                            <div class="mt-2"><i class="fab fa-linkedin text-primary me-2"></i> Denissya Julianthy</div>
                             <hr>
                             <a href="https://github.com/denissyaj/denissya-portfolio/blob/main/public/files/CV_Denissya_Julianthy.pdf" target="_blank" class="btn-gradient w-100"><i class="fas fa-download"></i> Download CV (PDF)</a>
-                            <div class="text-center mt-3"><small><i class="fas fa-calendar-alt"></i> Available for opportunities</small></div>
                         </div>
                     </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-md-3 col-6 mb-3"><div class="text-center p-3 border rounded bg-white"><i class="fas fa-graduation-cap fa-2x text-primary"></i><h3>2025</h3><small>Graduation Year</small></div></div>
-                    <div class="col-md-3 col-6 mb-3"><div class="text-center p-3 border rounded bg-white"><i class="fas fa-code fa-2x text-primary"></i><h3>2+</h3><small>Years Experience</small></div></div>
-                    <div class="col-md-3 col-6 mb-3"><div class="text-center p-3 border rounded bg-white"><i class="fas fa-file-alt fa-2x text-primary"></i><h3>5+</h3><small>DPSI Created</small></div></div>
-                    <div class="col-md-3 col-6 mb-3"><div class="text-center p-3 border rounded bg-white"><i class="fas fa-certificate fa-2x text-primary"></i><h3>507</h3><small>TOEFL Score</small></div></div>
                 </div>
             </div>
         </section>
@@ -463,20 +422,16 @@
             <div class="card-custom">
                 <h1 class="section-title">Work Experience</h1>
                 <div class="timeline mt-4">
-                    <!-- Web Developer - Current Job with DETAILED Technical Support Features -->
+                    <!-- Web Developer -->
                     <div class="timeline-item mb-4">
                         <div class="card border-0 shadow-sm">
                             <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-3">
-                                    <div>
-                                        <h5 class="mb-1">PT Simex Pharmaceutical Indonesia | Sukabumi, Indonesia</h5>
-                                        <h6 class="text-primary">Web Developer</h6>
-                                        <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
-                                    </div>
-                                    <span class="badge bg-success">Current</span>
-                                </div>
+                                <h5 class="mb-1">PT Simex Pharmaceutical Indonesia | Sukabumi, Indonesia</h5>
+                                <h6 class="text-primary">Web Developer</h6>
+                                <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
+                                <span class="badge bg-success ms-2">Current</span>
                                 
-                                <div class="accordion" id="expWebDev">
+                                <div class="accordion mt-3" id="expWebDev">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#techSupportFeatures">
@@ -485,39 +440,37 @@
                                         </h2>
                                         <div id="techSupportFeatures" class="accordion-collapse collapse" data-bs-parent="#expWebDev">
                                             <div class="accordion-body">
-                                                <p class="mb-3">Mengembangkan sistem <strong>Technical Support</strong> berbasis Laravel untuk menangani permintaan bantuan teknis perusahaan. Sistem ini mencakup 6 fitur utama:</p>
+                                                <p>Developed a <strong>Technical Support System</strong> using Laravel to handle company technical assistance requests. The system includes 6 main features:</p>
                                                 
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-plus-circle text-primary"></i> 1. Create Request</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Formulir pengajuan permintaan bantuan teknis terstruktur</li>
-                                                                <li>Memilih jenis pekerjaan (Perbaikan/Pemeliharaan)</li>
-                                                                <li>Memilih aset/mesin yang bermasalah</li>
-                                                                <li>Deskripsi masalah dan upload foto pendukung</li>
-                                                                <li>Menentukan penanggung jawab seksi (Maintenance/Utility/Workshop/Civil)</li>
-                                                                <li>Generate nomor request otomatis (BT0008/TK/V/2026)</li>
+                                                                <li>Structured technical support request form</li>
+                                                                <li>Select job type (Repair/Maintenance)</li>
+                                                                <li>Select problematic asset/machine</li>
+                                                                <li>Problem description and photo upload</li>
+                                                                <li>Assign responsible section (Maintenance/Utility/Workshop/Civil)</li>
+                                                                <li>Auto-generate request number (BT0008/TK/V/2026)</li>
                                                             </ul>
                                                         </div>
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-check-double text-primary"></i> 2. Approval Requester Manager (Level 1)</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Atasan pemohon menerima notifikasi permintaan</li>
-                                                                <li>Memeriksa kelengkapan dan kebenaran data permintaan</li>
-                                                                <li>Memberikan persetujuan (Approve) atau penolakan (Reject)</li>
-                                                                <li>Wajib mengisi komentar/notes sebagai alasan</li>
-                                                                <li>Status berubah menjadi "Waiting for TK Manager approval"</li>
+                                                                <li>Requester's supervisor receives notification</li>
+                                                                <li>Check request completeness and accuracy</li>
+                                                                <li>Approve or Reject with required comments</li>
+                                                                <li>Status changes to "Waiting for TK Manager approval"</li>
                                                             </ul>
                                                         </div>
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-user-tie text-primary"></i> 3. Approval TK Manager (Level 2)</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Manajer teknis mengevaluasi permintaan</li>
-                                                                <li>Memeriksa ketersediaan sumber daya, teknisi, dan peralatan</li>
-                                                                <li>Memberikan persetujuan akhir atau penolakan</li>
-                                                                <li>Wajib mengisi komentar/notes</li>
-                                                                <li>Setelah approve, permintaan masuk ke penugasan teknisi</li>
+                                                                <li>Technical manager evaluates the request</li>
+                                                                <li>Check resource, technician, and equipment availability</li>
+                                                                <li>Final approval or rejection with comments</li>
+                                                                <li>After approval, request goes to technician assignment</li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -525,72 +478,46 @@
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-clipboard-check text-primary"></i> 4. Close Ticket</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Teknisi menginput hasil pekerjaan dan langkah-langkah pengerjaan</li>
-                                                                <li>Mencatat penggunaan spare part dan kode part</li>
-                                                                <li>Mengisi tanggal dan jam selesai pengerjaan</li>
-                                                                <li>Upload dokumentasi foto hasil pekerjaan</li>
-                                                                <li>Pemohon melakukan verifikasi hasil pekerjaan</li>
-                                                                <li>Sistem otomatis menutup ticket setelah diverifikasi</li>
+                                                                <li>Technician inputs work results and steps</li>
+                                                                <li>Record spare part usage and part code</li>
+                                                                <li>Fill completion date and time</li>
+                                                                <li>Upload work documentation photos</li>
+                                                                <li>Requester verifies the work results</li>
+                                                                <li>System auto-closes ticket after verification</li>
                                                             </ul>
                                                         </div>
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-history text-primary"></i> 5. History</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Menyimpan seluruh riwayat permintaan bantuan teknis</li>
-                                                                <li>Dapat ditelusuri berdasarkan nomor request, aset, atau periode</li>
-                                                                <li>Menampilkan detail lengkap (pengajuan, approval, pelaksanaan, penutupan)</li>
-                                                                <li>Menampilkan approval log dengan timestamp</li>
-                                                                <li>Data dapat diakses kapan saja untuk keperluan audit</li>
+                                                                <li>Store complete technical support request history</li>
+                                                                <li>Searchable by request number, asset, or period</li>
+                                                                <li>Display complete details (submission, approval, execution, closure)</li>
+                                                                <li>Show approval log with timestamp</li>
+                                                                <li>Accessible anytime for audit purposes</li>
                                                             </ul>
                                                         </div>
                                                         <div class="mb-3 p-2 bg-light rounded">
                                                             <h6><i class="fas fa-chart-bar text-primary"></i> 6. Quality Report</h6>
                                                             <ul class="small mb-0">
-                                                                <li>Laporan jumlah permintaan berdasarkan status dan periode</li>
-                                                                <li>Laporan durasi penyelesaian pekerjaan (Completion Time)</li>
-                                                                <li>Laporan penggunaan spare part (Part Code)</li>
-                                                                <li>Laporan kinerja teknisi (Executor)</li>
-                                                                <li>Filter berdasarkan tanggal, department, maintenance status</li>
-                                                                <li>Ekspor data ke format PDF/Excel</li>
-                                                                <li>Perhitungan MTTR (Mean Time To Repair)</li>
+                                                                <li>Request count report by status and period</li>
+                                                                <li>Work completion duration report (Completion Time)</li>
+                                                                <li>Spare part usage report (Part Code)</li>
+                                                                <li>Technician performance report (Executor)</li>
+                                                                <li>Filter by date, department, maintenance status</li>
+                                                                <li>Export data to PDF/Excel format</li>
+                                                                <li>MTTR (Mean Time To Repair) calculation</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="mt-3">
-                                                    <span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span>
-                                                    <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
-                                                    <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
-                                                    <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
-                                                    <span class="skill-badge"><i class="fas fa-chart-line"></i> Draw.io</span>
-                                                    <span class="skill-badge"><i class="fab fa-figma"></i> Figma</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppicFeatures">
-                                                <i class="fas fa-boxes me-2"></i> PPIC Material Inventory System
-                                            </button>
-                                        </h2>
-                                        <div id="ppicFeatures" class="accordion-collapse collapse" data-bs-parent="#expWebDev">
-                                            <div class="accordion-body">
-                                                <ul class="mb-0">
-                                                    <li>Membangun sistem manajemen inventori bahan baku dengan Laravel</li>
-                                                    <li>Fitur pelacakan stok real-time dan monitoring persediaan</li>
-                                                    <li>Manajemen pesanan pembelian (Purchase Order) dengan approval workflow</li>
-                                                    <li>Notifikasi otomatis saat stok menipis</li>
-                                                    <li>Reporting dan analytics dashboard</li>
-                                                    <li>Integrasi dengan sistem supplier management</li>
-                                                </ul>
-                                                <div class="mt-2">
-                                                    <span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span>
-                                                    <span class="skill-badge"><i class="fas fa-database"></i> MySQL</span>
-                                                    <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                                                    <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                                                    <span class="skill-badge">Laravel</span>
+                                                    <span class="skill-badge">MySQL</span>
+                                                    <span class="skill-badge">Bootstrap 5</span>
+                                                    <span class="skill-badge">JavaScript</span>
+                                                    <span class="skill-badge">Draw.io</span>
+                                                    <span class="skill-badge">Figma</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -613,11 +540,10 @@
                                     </button>
                                     <div class="collapse mt-2" id="analystDetailsSys">
                                         <ul>
-                                            <li><strong>IT Support System</strong> - Complete DPSI: URS, functional/non-functional requirements, UML (Use Case, Activity, Class Diagrams), database design, UI/UX in Figma</li>
-                                            <li><strong>Technical Support System</strong> - Comprehensive DPSI covering request management, 2-level approval flow, technician assignment, spare part tracking, history, and quality reporting system</li>
-                                            <li><strong>Environment Monitoring System</strong> - System design for monitoring environmental parameters on PIMS Website</li>
+                                            <li><strong>IT Support System</strong> - Complete DPSI: URS, requirements, UML diagrams, database design, UI/UX in Figma</li>
+                                            <li><strong>Technical Support System</strong> - DPSI covering request management, 2-level approval, technician assignment, spare part tracking, history, quality reporting</li>
+                                            <li><strong>Environment Monitoring System</strong> - System design for environmental parameters monitoring</li>
                                         </ul>
-                                        <div class="mt-2"><span class="skill-badge">Draw.io</span><span class="skill-badge">Figma</span><span class="skill-badge">UML Diagrams</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -636,19 +562,12 @@
                                         <i class="fas fa-code"></i> Projects
                                     </button>
                                     <div class="collapse mt-2" id="internDetailsNew">
-                                        <ul><li>Developed Dinas Kesehatan Kota Solok website using PHP Native</li><li>Built responsive web interfaces with Bootstrap</li><li>Integrated MySQL database for dynamic content management</li></ul>
+                                        <ul><li>Developed Dinas Kesehatan Kota Solok website using PHP Native</li><li>Built responsive interfaces with Bootstrap</li><li>Integrated MySQL database</li></ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="card-custom bg-light mt-4">
-                <h4 class="mb-3"><i class="fas fa-info-circle text-primary me-2"></i>My Roles Explained</h4>
-                <div class="row">
-                    <div class="col-md-6"><div class="p-3 bg-white rounded h-100"><h5><i class="fas fa-chalkboard-user text-primary me-2"></i>As System Analyst</h5><ul class="small mb-0"><li>User Requirements Specification (URS)</li><li>Functional Specification Documents (FSD)</li><li>System Design Documents (DPSI)</li><li>UML Diagrams (Use Case, Activity, Class)</li><li>Flowchart</li></ul></div></div>
-                    <div class="col-md-6"><div class="p-3 bg-white rounded h-100"><h5><i class="fas fa-laptop-code text-primary me-2"></i>As Web Developer</h5><ul class="small mb-0"><li>Technical Support System (Laravel) - Full features</li><li>PPIC Material Inventory (Laravel)</li><li>Dinas Kesehatan Website (PHP Native)</li></ul></div></div>
                 </div>
             </div>
         </section>
@@ -658,10 +577,10 @@
             <div class="card-custom">
                 <h1 class="section-title">Skills</h1>
                 <div class="accordion mt-4" id="skillsAccordion">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#techSkills"><i class="fas fa-code"></i> Technical Skills</button></h2><div id="techSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge"><i class="fas fa-chart-line"></i> System Analysis</span><span class="skill-badge"><i class="fas fa-file-alt"></i> URS</span><span class="skill-badge"><i class="fas fa-file-contract"></i> FSD</span><span class="skill-badge"><i class="fab fa-laravel"></i> Laravel</span><span class="skill-badge"><i class="fab fa-php"></i> PHP Native</span><span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span><span class="skill-badge"><i class="fas fa-vial"></i> UAT</span><span class="skill-badge"><i class="fas fa-database"></i> MySQL</span><span class="skill-badge"><i class="fab fa-html5"></i> HTML</span><span class="skill-badge"><i class="fas fa-water"></i> SDLC Waterfall</span></div></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#softSkills"><i class="fas fa-users"></i> Soft Skills</button></h2><div id="softSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge">Responsibility</span><span class="skill-badge">Teamwork</span><span class="skill-badge">Problem-Solving</span><span class="skill-badge">Analytical Thinking</span></div></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#computerSkills"><i class="fas fa-laptop"></i> Computer Skills</button></h2><div id="computerSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Office</span><span class="skill-badge"><i class="fab fa-google"></i> Google Workspace</span><span class="skill-badge"><i class="fas fa-chart-line"></i> Draw.IO</span><span class="skill-badge"><i class="fab fa-figma"></i> Figma</span></div></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#langSkills"><i class="fas fa-language"></i> Languages</button></h2><div id="langSkills" class="accordion-collapse collapse" data-bs-parent="#skillsAccordion"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge"><i class="fas fa-flag"></i> Indonesian (Native)</span><span class="skill-badge"><i class="fas fa-language"></i> English (Intermediate)</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#techSkills"><i class="fas fa-code"></i> Technical Skills</button></h2><div id="techSkills" class="accordion-collapse collapse"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge">System Analysis</span><span class="skill-badge">URS</span><span class="skill-badge">FSD</span><span class="skill-badge">Laravel</span><span class="skill-badge">PHP Native</span><span class="skill-badge">JavaScript</span><span class="skill-badge">MySQL</span><span class="skill-badge">UAT</span><span class="skill-badge">SDLC Waterfall</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#softSkills"><i class="fas fa-users"></i> Soft Skills</button></h2><div id="softSkills" class="accordion-collapse collapse"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge">Responsibility</span><span class="skill-badge">Teamwork</span><span class="skill-badge">Problem-Solving</span><span class="skill-badge">Analytical Thinking</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#computerSkills"><i class="fas fa-laptop"></i> Computer Skills</button></h2><div id="computerSkills" class="accordion-collapse collapse"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge">MS Office</span><span class="skill-badge">Google Workspace</span><span class="skill-badge">Draw.IO</span><span class="skill-badge">Figma</span></div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#langSkills"><i class="fas fa-language"></i> Languages</button></h2><div id="langSkills" class="accordion-collapse collapse"><div class="accordion-body"><div class="d-flex flex-wrap gap-2"><span class="skill-badge">Indonesian (Native)</span><span class="skill-badge">English (Intermediate)</span></div></div></div></div>
                 </div>
             </div>
         </section>
@@ -671,11 +590,76 @@
             <div class="card-custom">
                 <h1 class="section-title">Featured Projects</h1>
                 <div class="accordion mt-4" id="projectsAccordion">
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proj1"><i class="fas fa-headset fa-2x me-3 text-primary"></i> Technical Support System</button></h2><div id="proj1" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"><div class="accordion-body"><div class="alert alert-info"><i class="fas fa-user-check me-2"></i> <strong>My Role: System Analyst & Web Developer</strong></div><p>Complete technical support management system for handling maintenance requests, technician assignments, and spare part tracking.</p><div class="row"><div class="col-md-6"><h6>🎯 Features:</h6><ul><li><strong>Create Request</strong> - Pengajuan permintaan dengan upload foto</li><li><strong>Approval Level 1 (Requester Manager)</strong> - Persetujuan atasan pemohon</li><li><strong>Approval Level 2 (TK Manager)</strong> - Persetujuan manajer teknis</li><li><strong>Close Ticket</strong> - Penutupan setelah verifikasi</li><li><strong>History</strong> - Riwayat lengkap permintaan</li><li><strong>Quality Report</strong> - Laporan mutu dengan filter dan ekspor</li></ul></div><div class="col-md-6"><h6>🛠️ Tech Stack:</h6><span class="skill-badge">Laravel</span><span class="skill-badge">MySQL</span><span class="skill-badge">Bootstrap 5</span><span class="skill-badge">JavaScript</span><span class="skill-badge">Draw.io</span><span class="skill-badge">Figma</span></div></div></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proj2"><i class="fas fa-desktop fa-2x me-3 text-primary"></i> IT Support System</button></h2><div id="proj2" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"><div class="accordion-body"><div class="alert alert-warning"><i class="fas fa-pen-ruler me-2"></i> <strong>My Role: System Analyst Only</strong></div><p>Complete DPSI documentation for IT support ticketing system.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proj3"><i class="fas fa-boxes fa-2x me-3 text-primary"></i> PPIC Material Inventory System</button></h2><div id="proj3" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"><div class="accordion-body"><div class="alert alert-info"><i class="fas fa-laptop-code me-2"></i> <strong>My Role: Web Developer</strong></div><p>Material inventory management system with real-time stock tracking and PO management.</p></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proj4"><i class="fas fa-hospital fa-2x me-3 text-primary"></i> Dinas Kesehatan Website</button></h2><div id="proj4" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"><div class="accordion-body"><div class="alert alert-info"><i class="fas fa-laptop-code me-2"></i> <strong>My Role: Web Developer</strong> - PHP Native</div></div></div></div>
-                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#proj5"><i class="fas fa-cloud-sun-rain fa-2x me-3 text-primary"></i> Weather Pattern Clustering Research</button></h2><div id="proj5" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion"><div class="accordion-body"><div class="alert alert-success"><strong>SINTA 3 Publication</strong> - BITS Journal Vol 7 No 2 Sept 2025</div></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj1"><i class="fas fa-headset me-3 text-primary"></i> Technical Support System</button></h2><div id="proj1" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: System Analyst & Web Developer</strong></div><p>Complete technical support management system with 6 main features: Create Request, 2-Level Approval, Close Ticket, History, and Quality Report.</p></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj2"><i class="fas fa-desktop me-3 text-primary"></i> IT Support System</button></h2><div id="proj2" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-warning"><strong>My Role: System Analyst Only</strong></div><p>Complete DPSI documentation for IT support ticketing system.</p></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj3"><i class="fas fa-boxes me-3 text-primary"></i> PPIC Material Inventory System</button></h2><div id="proj3" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Material inventory system with real-time stock tracking and PO management.</p></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj4"><i class="fas fa-hospital me-3 text-primary"></i> Dinas Kesehatan Website</button></h2><div id="proj4" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-info"><strong>My Role: Web Developer</strong></div><p>Official website built with PHP Native.</p></div></div></div>
+                    <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#proj5"><i class="fas fa-cloud-sun-rain me-3 text-primary"></i> Weather Pattern Research</button></h2><div id="proj5" class="accordion-collapse collapse"><div class="accordion-body"><div class="alert alert-success"><strong>SINTA 3 Publication</strong> - BITS Journal Vol 7 No 2 Sept 2025</div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SCREENSHOTS SECTION (GAMBAR) ==================== -->
+        <section id="screenshots">
+            <div class="card-custom">
+                <h1 class="section-title">📸 Technical Support System - Screenshots</h1>
+                <p class="text-muted mb-4">Below are the actual screenshots of the Technical Support System I developed:</p>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/REQUEST TECHNICAL SUPPORT" class="screenshot-img" alt="Create Request" onerror="this.src='https://placehold.co/600x400/667eea/white?text=Request+Create'">
+                            <div class="mt-2 text-center">
+                                <h6>📝 1. Create Request</h6>
+                                <small class="text-muted">Form to submit technical assistance requests</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/APPROVAL LEVEL 1 (REQUESTER MANAGER)" class="screenshot-img" alt="Approval Level 1" onerror="this.src='https://placehold.co/600x400/667eea/white?text=Approval+Level+1'">
+                            <div class="mt-2 text-center">
+                                <h6>✅ 2. Approval Requester Manager (Level 1)</h6>
+                                <small class="text-muted">First level approval by requester's supervisor</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/APPROVAL LEVEL 2 (TK MANAGER)" class="screenshot-img" alt="Approval Level 2" onerror="this.src='https://placehold.co/600x400/667eea/white?text=Approval+Level+2'">
+                            <div class="mt-2 text-center">
+                                <h6>👔 3. Approval TK Manager (Level 2)</h6>
+                                <small class="text-muted">Final approval by technical manager</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/CLOSE TICKET REQUEST" class="screenshot-img" alt="Close Ticket" onerror="this.src='https://placehold.co/600x400/667eea/white?text=Close+Ticket'">
+                            <div class="mt-2 text-center">
+                                <h6>🔒 4. Close Ticket</h6>
+                                <small class="text-muted">Technician work result submission and verification</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/HISTORY (PRINT)" class="screenshot-img" alt="History" onerror="this.src='https://placehold.co/600x400/667eea/white?text=History'">
+                            <div class="mt-2 text-center">
+                                <h6>📜 5. History</h6>
+                                <small class="text-muted">Complete request history with approval log</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="screenshot-card">
+                            <img src="images/QUALITY REPORT" class="screenshot-img" alt="Quality Report" onerror="this.src='https://placehold.co/600x400/667eea/white?text=Quality+Report'">
+                            <div class="mt-2 text-center">
+                                <h6>📊 6. Quality Report</h6>
+                                <small class="text-muted">Quality report with filters and MTTR calculation</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -685,16 +669,14 @@
             <div class="card-custom">
                 <h1 class="section-title">Get In Touch</h1>
                 <div class="row">
-                    <div class="col-lg-5 mb-4"><div class="contact-info"><h3 class="text-white mb-4">Contact Information</h3><div class="mb-4"><i class="fas fa-map-marker-alt"></i><div class="d-inline-block"><strong>Location</strong><br>Kota Cimahi, Jawa Barat 40523, Indonesia</div></div><div class="mb-4"><i class="fas fa-envelope"></i><div class="d-inline-block"><strong>Email</strong><br>denissyaaj23@gmail.com</div></div><div class="mb-4"><i class="fas fa-phone"></i><div class="d-inline-block"><strong>Phone</strong><br>089530026270</div></div><div class="mt-5 pt-3"><h5 class="text-white mb-3">Follow Me</h5><div class="d-flex gap-3"><a href="https://www.linkedin.com/in/denissyajulianthy" target="_blank" class="btn btn-light rounded-circle"><i class="fab fa-linkedin-in"></i></a><a href="https://www.instagram.com/denissya.julianthy/" target="_blank" class="btn btn-light rounded-circle"><i class="fab fa-instagram"></i></a><a href="https://github.com/denissyaj" target="_blank" class="btn btn-light rounded-circle"><i class="fab fa-github"></i></a><a href="mailto:denissyaaj23@gmail.com" class="btn btn-light rounded-circle"><i class="fas fa-envelope"></i></a></div></div></div></div>
-                    <div class="col-lg-7"><div class="card border-0 shadow-sm"><div class="card-body p-4"><h4 class="mb-4">Send Me a Message</h4><form action="https://formspree.io/f/denissyaaj23@gmail.com" method="POST"><div class="row"><div class="col-md-6 mb-3"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div><div class="col-md-6 mb-3"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div></div><div class="mb-3"><input type="text" name="subject" class="form-control" placeholder="Subject"></div><div class="mb-3"><textarea name="message" class="form-control" rows="5" placeholder="Your Message..." required></textarea></div><button type="submit" class="btn-gradient w-100"><i class="fas fa-paper-plane"></i> Send Message</button></form><div class="text-center mt-4"><a href="mailto:denissyaaj23@gmail.com" class="text-primary"><i class="fas fa-envelope"></i> denissyaaj23@gmail.com</a></div></div></div></div>
+                    <div class="col-lg-5 mb-4"><div class="contact-info"><h3 class="text-white mb-4">Contact Information</h3><div class="mb-4"><i class="fas fa-map-marker-alt"></i><div class="d-inline-block"><strong>Location</strong><br>Kota Cimahi, Jawa Barat 40523</div></div><div class="mb-4"><i class="fas fa-envelope"></i><div class="d-inline-block"><strong>Email</strong><br>denissyaaj23@gmail.com</div></div><div class="mb-4"><i class="fas fa-phone"></i><div class="d-inline-block"><strong>Phone</strong><br>089530026270</div></div><div class="mt-4"><h5>Follow Me</h5><div class="d-flex gap-3 mt-2"><a href="https://linkedin.com/in/denissyajulianthy" class="btn btn-light rounded-circle"><i class="fab fa-linkedin-in"></i></a><a href="https://instagram.com/denissya.julianthy" class="btn btn-light rounded-circle"><i class="fab fa-instagram"></i></a><a href="https://github.com/denissyaj" class="btn btn-light rounded-circle"><i class="fab fa-github"></i></a></div></div></div></div>
+                    <div class="col-lg-7"><div class="card border-0 shadow-sm"><div class="card-body p-4"><h4>Send Me a Message</h4><form action="https://formspree.io/f/denissyaaj23@gmail.com" method="POST"><div class="row"><div class="col-md-6 mb-3"><input type="text" name="name" class="form-control" placeholder="Your Name" required></div><div class="col-md-6 mb-3"><input type="email" name="email" class="form-control" placeholder="Your Email" required></div></div><div class="mb-3"><input type="text" name="subject" class="form-control" placeholder="Subject"></div><div class="mb-3"><textarea name="message" class="form-control" rows="5" placeholder="Your Message..." required></textarea></div><button type="submit" class="btn-gradient w-100"><i class="fas fa-paper-plane"></i> Send Message</button></form><div class="text-center mt-4"><a href="mailto:denissyaaj23@gmail.com" class="text-primary"><i class="fas fa-envelope"></i> denissyaaj23@gmail.com</a></div></div></div></div>
                 </div>
             </div>
-            <div class="row mt-4"><div class="col-md-4 mb-3"><div class="card-custom p-3 text-center"><i class="fas fa-phone-alt fa-2x text-primary mb-2"></i><h6>Phone</h6><p class="small">089530026270</p></div></div><div class="col-md-4 mb-3"><div class="card-custom p-3 text-center"><i class="fas fa-envelope fa-2x text-primary mb-2"></i><h6>Email</h6><p class="small">denissyaaj23@gmail.com</p></div></div><div class="col-md-4 mb-3"><div class="card-custom p-3 text-center"><i class="fab fa-linkedin fa-2x text-primary mb-2"></i><h6>LinkedIn</h6><p class="small">Denissya Julianthy</p></div></div></div>
         </section>
     </div>
 </div>
 
-<!-- Footer -->
 <footer class="footer">
     <div class="container">
         <p class="mb-0">&copy; 2025 Denissya Julianthy. All Rights Reserved.</p>
