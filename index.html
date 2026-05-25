@@ -422,53 +422,6 @@
                                 <h6 class="text-primary">Web Developer</h6>
                                 <small class="text-muted"><i class="far fa-calendar-alt"></i> February 2026 - Present</small>
                                 <span class="badge bg-success ms-2">Current</span>
-                                
-                                <div class="accordion mt-3" id="expWebDev">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#techSupportFeatures">
-                                                <i class="fas fa-headset me-2"></i> Technical Support System - Complete Features
-                                            </button>
-                                        </h2>
-                                        <div id="techSupportFeatures" class="accordion-collapse collapse" data-bs-parent="#expWebDev">
-                                            <div class="accordion-body">
-                                                <p>Developed a <strong>Technical Support System</strong> using Laravel to handle company technical assistance requests. The system includes 6 main features:</p>
-                                                
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-plus-circle text-primary"></i> 1. Create Request</h6>
-                                                            <ul><li>Structured technical support request form</li><li>Select job type (Repair/Maintenance)</li><li>Select problematic asset/machine</li><li>Problem description and photo upload</li><li>Assign responsible section</li><li>Auto-generate request number</li></ul>
-                                                        </div>
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-check-double text-primary"></i> 2. Approval Requester Manager (Level 1)</h6>
-                                                            <ul><li>Requester's supervisor receives notification</li><li>Check request completeness</li><li>Approve or Reject with required comments</li></ul>
-                                                        </div>
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-user-tie text-primary"></i> 3. Approval TK Manager (Level 2)</h6>
-                                                            <ul><li>Technical manager evaluates the request</li><li>Check resource availability</li><li>Final approval or rejection with comments</li></ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-clipboard-check text-primary"></i> 4. Close Ticket</h6>
-                                                            <ul><li>Technician inputs work results</li><li>Record spare part usage</li><li>Upload documentation photos</li><li>Requester verifies the work</li></ul>
-                                                        </div>
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-history text-primary"></i> 5. History</h6>
-                                                            <ul><li>Store complete request history</li><li>Searchable by request number, asset, or period</li><li>Show approval log with timestamp</li></ul>
-                                                        </div>
-                                                        <div class="mb-3 p-2 bg-light rounded">
-                                                            <h6><i class="fas fa-chart-bar text-primary"></i> 6. Quality Report</h6>
-                                                            <ul><li>Request count report by status</li><li>Work completion duration report</li><li>Spare part usage report</li><li>Export to PDF/Excel</li><li>MTTR calculation</li></ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-3"><span class="skill-badge">Laravel</span><span class="skill-badge">MySQL</span><span class="skill-badge">Bootstrap</span><span class="skill-badge">JavaScript</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -539,65 +492,136 @@
             </div>
         </section>
 
-        <!-- ==================== SCREENSHOTS SECTION - PATH PASTI BERHASIL ==================== -->
+        <!-- ==================== TECHNICAL SUPPORT SYSTEM - SCREENSHOTS WITH FEATURES ==================== -->
         <section id="screenshots">
             <div class="card-custom">
                 <h1 class="section-title">📸 Technical Support System - Screenshots</h1>
                 <p class="text-muted mb-4">Below are the actual screenshots of the Technical Support System I developed:</p>
                 
-                <div class="row">
-                    <div class="col-md-6 mb-4">
+                <!-- Feature 1: Create Request -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/REQUEST.png" class="screenshot-img" alt="Create Request" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>📝 1. Create Request</h6>
-                                <small class="text-muted">Form to submit technical assistance requests</small>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">1. Create Request</h3>
+                            <ul class="mt-3">
+                                <li>Structured technical support request form</li>
+                                <li>Select job type (Repair/Maintenance)</li>
+                                <li>Select problematic asset/machine</li>
+                                <li>Problem description and photo upload</li>
+                                <li>Assign responsible section (Maintenance/Utility/Workshop/Civil)</li>
+                                <li>Auto-generate request number (BT0008/TK/V/2026)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2: Approval Requester Manager (Level 1) -->
+                <div class="row mb-5 align-items-center flex-row-reverse">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/APPROVAL-LEVEL-1.png" class="screenshot-img" alt="Approval Level 1" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>✅ 2. Approval Requester Manager (Level 1)</h6>
-                                <small class="text-muted">First level approval by requester's supervisor</small>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">2. Approval Requester Manager (Level 1)</h3>
+                            <ul class="mt-3">
+                                <li>Requester's supervisor receives notification</li>
+                                <li>Check request completeness and accuracy</li>
+                                <li>Approve or Reject with required comments</li>
+                                <li>Status changes to "Waiting for TK Manager approval"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3: Approval TK Manager (Level 2) -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/APPROVAL-LEVEL-2.png" class="screenshot-img" alt="Approval Level 2" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>👔 3. Approval TK Manager (Level 2)</h6>
-                                <small class="text-muted">Final approval by technical manager</small>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">3. Approval TK Manager (Level 2)</h3>
+                            <ul class="mt-3">
+                                <li>Technical manager evaluates the request</li>
+                                <li>Check resource, technician, and equipment availability</li>
+                                <li>Final approval or rejection with required comments</li>
+                                <li>After approval, request goes to technician assignment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 4: Close Ticket -->
+                <div class="row mb-5 align-items-center flex-row-reverse">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/CLOSE-TICKET.png" class="screenshot-img" alt="Close Ticket" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>🔒 4. Close Ticket</h6>
-                                <small class="text-muted">Technician work result submission and verification</small>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">4. Close Ticket</h3>
+                            <ul class="mt-3">
+                                <li>Technician inputs work results and completion steps</li>
+                                <li>Record spare part usage and part code</li>
+                                <li>Fill completion date and time</li>
+                                <li>Upload documentation photos of work results</li>
+                                <li>Requester verifies the work results</li>
+                                <li>System auto-closes ticket after verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 5: History -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/HISTORY.png" class="screenshot-img" alt="History" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>📜 5. History</h6>
-                                <small class="text-muted">Complete request history with approval log</small>
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">5. History</h3>
+                            <ul class="mt-3">
+                                <li>Store complete technical support request history</li>
+                                <li>Searchable by request number, asset, or period</li>
+                                <li>Display complete details (submission, approval, execution, closure)</li>
+                                <li>Show approval log with timestamp</li>
+                                <li>Accessible anytime for audit purposes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 6: Quality Report -->
+                <div class="row mb-5 align-items-center flex-row-reverse">
+                    <div class="col-md-6">
                         <div class="screenshot-card">
                             <img src="images/QUALITY-REPORT.png" class="screenshot-img" alt="Quality Report" onerror="this.style.display='none'">
-                            <div class="mt-2 text-center">
-                                <h6>📊 6. Quality Report</h6>
-                                <small class="text-muted">Quality report with filters and MTTR calculation</small>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-box p-3">
+                            <h3 class="text-primary">6. Quality Report</h3>
+                            <ul class="mt-3">
+                                <li>Request count report by status and period</li>
+                                <li>Work completion duration report (Completion Time)</li>
+                                <li>Spare part usage report (Part Code)</li>
+                                <li>Technician performance report (Executor)</li>
+                                <li>Filter by date, department, maintenance status</li>
+                                <li>Export data to PDF/Excel format</li>
+                                <li>MTTR (Mean Time To Repair) calculation</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
